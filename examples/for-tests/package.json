@@ -4,14 +4,15 @@
   "private": true,
   "dependencies": {
     "axios": "^0.21.0",
+    "eslint": "^7.24.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "postinstall": "npm run link",
-    "link": "(cd ../../ && npm link) && npm link supertokens-auth-react && (cd ../../ && SRC=./examples/for-tests npm run link-dependencies)",
+    "postinstall": "yarn link",
+    "link": "(cd ../../ && yarn link) && yarn link supertokens-auth-react && (cd ../../ && set SRC=./examples/for-tests && yarn link-dependencies)",
     "start": "PORT=3031 react-scripts start",
     "dev": "npx npm-run-all --parallel start server",
     "server": "cd ../../ && npm run server",
